@@ -28,5 +28,3 @@ while trys>1:
         continue
     else:
         trys-=1
-     
-        
