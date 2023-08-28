@@ -15,4 +15,13 @@ i = 0
 while i < len(ord[ran]):
     print("___ ", end="")
     i += 1
+    
+    
 
+print(" ", end="\n")
+guess = input("gissning: ")
+if guess.isdigit():   
+    print(txt)
+        
+     
+        
