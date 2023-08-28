@@ -6,22 +6,27 @@ import random
 
 trys = 10
 
-ord = ["abc", "defghi", "jklm"]
-ran = random.randrange(0,len(ord))
+words = ["abc", "defghi", "jklm"]
+ran = random.randrange(0,len(words))
 txt = "välkommen till hänga gubben, ordet har {} bokstäver"
+vald = words[ran]
+alpha = list(vald)
 
-print(txt.format(len(ord[ran])))
+print(txt.format(len(vald)))
 i = 0
-while i < len(ord[ran]):
+while i < len(vald):
     print("___ ", end="")
     i += 1
-    
-    
 
-print(" ", end="\n")
-guess = input("gissning: ")
-if guess.isdigit():   
-    print(txt)
-        
+    
+while trys>1:
+    print(trys, " ", end="\n")
+    guess = input("gissning: ")
+    if guess.isdigit() or 1!=len(guess):
+        print(vald, alpha)
+    elif guess in alpha:
+        continue
+    else:
+        trys-=1
      
         
